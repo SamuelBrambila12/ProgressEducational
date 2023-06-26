@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=devide-width">
+	<title>Progress Educational Institute</title>
+	<link href="maternal1.css" rel="stylesheet" type="text/css" />
+	<link href="style2.css" rel="stylesheet" type="text/css" />
+	<link href="img/progress.png" rel="icon" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+	<style type="text/css">/* Agrega esta regla CSS para ocultar la imagen en las secciones posteriores */
+      .hide-image {
+        display: none;
+      }
+      .freebirdFormviewerViewHeaderTitleRow {
+        display: none;
+      }
+	</style>
+	<script>
+      window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('barra-navegacion');
+        const imagenCalcomania2 = document.getElementById('imagen-calcomania2');
+        if (window.scrollY > 0) {
+          navbar.classList.add('scrolled');
+          imagenCalcomania2.style.transform = 'translateY(-20px)';
+        } else {
+          navbar.classList.remove('scrolled');
+          imagenCalcomania2.style.transform = 'translateY(0)';
+        }
+      });
+      window.addEventListener('load',function() {
+        const galeria = document.getElementById('galeria');
+        const imagenes = galeria.getElementsByTagName('img');
+        let index = 0;
+        const intervalo = 3000;
+        
+        function cambiarImagen() {
+          imagenes[index].style.opacity = 0;
+          index = (index + 1) % imagenes.length;
+          imagenes[index].style.opacity = 1;
+        }
+        function iniciarGaleria(){
+          imagenes[index].style.opacity = 1;
+          setInterval(cambiarImagen, intervalo);
+        }
+        if (imagenes.length > 0){
+          for (let i = 0; i < imagenes.length; i++){
+            imagenes[i].style.opacity = 0;
+          }
+          iniciarGaleria();
+        }
+    });
+    </script>
+</head>
+<body><script>
+      const footer = document.querySelector('footer');
+      const iconos = footer.querySelectorAll('.redes-container a');
+
+      iconos.forEach((icono) => {
+        icono.addEventListener('mouseover', () => {
+          iconos.forEach((otherIcono) => {
+            if (otherIcono !== icono) {
+              otherIcono.classList.toggle('desenfocado', true);
+            }
+          });
+          icono.classList.toggle('no-escala', true);
+        });
+
+        icono.addEventListener('mouseout', () => {
+          iconos.forEach((otherIcono) => {
+            otherIcono.classList.toggle('desenfocado', false);
+          });
+          icono.classList.toggle('no-escala', false);
+        });
+      });
+window.onload = function() {
+  var logo = document.getElementById("logo");
+  logo.onclick = function() {
+    window.location.href = "tu_link_aqui";
+  };
+};
+    </script></body>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+<div id="loader">
+<div class="block red"></div>
+
+<div class="block green"></div>
+
+<div class="block blue"></div>
+<!-- Agrega más bloques según sea necesario --></div>
+<!--Primera sección-->
+
+<div id="primera-seccion">
+<div id="barra-navegacion"><a href="https://progresseducational.com.mx/"><img alt="Logo del preescolar" id="logo" src="img/progress.png" /> </a>
+
+<div id="opciones-navegacion"><a href="index.html">Inicio</a> <a href="acerca-de.html">Acerca de nosotros</a> <a href="maternal.html">Maternal</a> <a href="kinder.html">Kinder</a> <a href="servicios.html">Servicios</a></div>
+</div>
+
+<div id="primera-seccion-contenido">
+<h1>Maternal</h1>
+
+<h2>Para peque&ntilde;os de 2 a 3 a&ntilde;os</h2>
+</div>
+</div>
+<!-- Segunda sección -->
+
+<div id="segunda-seccion">
+<p class="frase">En esta etapa nos enfocamos en el desarrollo del potencial de cada ni&ntilde;o a trav&eacute;s de actividades que le permitir&aacute;n desarrollar su lenguaje, psicomotricidad y afectividad; reforzando de manera positiva los h&aacute;bitos en educaci&oacute;n y salud.</p>
+
+<p class="frase">Fomentamos su autonom&iacute;a por medio del juego, centr&aacute;ndonos en el desarrollo de su motricidad gruesa; gui&aacute;ndonos a trav&eacute;s de sus primeros pasos y necesidades, desarrollando positivamente su personalidad y orient&aacute;ndolos en la toma de sus propias decisiones. En esta etapa las peque&ntilde;as y los peque&ntilde;os ser&aacute;n invitados a vivir m&uacute;ltiples aventuras que favorecer&aacute;n su lenguaje e imaginaci&oacute;n mediante diversas actividades l&uacute;dico-educativas, de expresi&oacute;n corporal, psicomotricidad y de desarrollo perceptual. Adem&aacute;s de vivir la iniciaci&oacute;n al control de esf&iacute;nteres.</p>
+<img alt="Calcomanía" id="imagen-calcomania" src="img/parallaxobject3.png" /> <img alt="Calcomanía2" id="imagen-calcomania2" src="img/bee.png" /></div>
+<!--Tercera sección-->
+
+<div id="tercera-seccion">
+<div class="galeria-container" id="galeria"><img alt="" src="img/1.png" /> <img alt="" src="img/1.png" /> <img alt="" src="img/1.png" /></div>
+
+<div id="cuadros-galeria">
+<div class="cuadro-galeria" onclick="mostrarImagen(0)"><img alt="Cuadro 1" src="img/1.png" /></div>
+
+<div class="cuadro-galeria" onclick="mostrarImagen(1)"><img alt="Cuadro 2" src="img/1.png" /></div>
+
+<div class="cuadro-galeria" onclick="mostrarImagen(2)"><img alt="Cuadro 3" src="img/1.png" /></div>
+</div>
+</div>
+<!--cuarta sección-->
+
+<div id="cuarta-seccion">
+<div id="contenedor">
+<div class="mitad" id="cuarta-seccion-izq"></div>
+
+<div class="mitad" id="cuarta-seccion-der"><img alt="" src="img/horariomat.png" /></div>
+</div>
+</div>
+<!--pie de página-->
+
+<footer>
+  <div class="redes-container">
+    <a href="https://www.facebook.com/progresseducationalinst" class="facebook"><i class="fa fa-facebook-f"></i></a></li>
+    <a href="https://www.instagram.com/progresseducational/" class="instagram"><i class="fa fa-instagram"></i></a></li>
+  </div>
+  <p><i class="fa fa-phone"></i> Teléfono: <a href="tel:3331763652" class="footer-link">3331763652</a></p>
+  <p>Dirección: <a href="https://goo.gl/maps/gaVsMvKyPPDgcJwNA" class="footer-link">C. Mallorca 1410, Lomas del Country</a></p>
+  <p>Guadalajara, Jalisco</p>
+  <p>&copy; Copyright 2023 <span Style="Color: #0984e3;">Progress Educational Institute</span></p>
+</footer>
+<script>
+    window.addEventListener('load', function() {
+      const loader = document.getElementById('loader');      
+      setTimeout(function() {
+        loader.style.display = 'none';
+        document.body.style.display = 'block';
+    }, 1000);   
+});
+
+    function mostrarImagen(index) {
+      const galeria = document.getElementById('galeria');
+      const imagenes = galeria.getElementsByTagName('img');
+
+      for (let i = 0; i < imagenes.length; i++) {
+        imagenes[i].style.opacity = 0;
+      }
+
+      imagenes[index].style.opacity = 1;
+    }
+
+    window.addEventListener('load', function() {
+  const imagenCalcomania = document.getElementById('imagen-calcomania');
+  const navbar = document.getElementById('barra-navegacion'); // Reemplaza 'barra-navegacion' con el ID real de tu barra de navegación
+  let position = 0;
+  const step = 2; // Ajusta el valor de paso según tus necesidades
+  const interval = 60; // Ajusta el intervalo de tiempo entre cada paso
+  
+  function moveImage() {
+    const imageWidth = imagenCalcomania.offsetWidth;
+    const screenWidth = window.innerWidth;
+    const navbarPosition = navbar.getBoundingClientRect().left;
+    
+    position += step;
+    imagenCalcomania.style.left = position + 'px';
+    
+    if (position >= screenWidth - navbarPosition - imageWidth) {
+      position = -imageWidth; // Reinicia la posición de la imagen
+    }
+  }
+  
+  const intervalId = setInterval(moveImage, interval);
+});
+
+
+  </script></html>

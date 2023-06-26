@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=devide-width">
+	<title>Progress Educational Institute</title>
+	<link href="servicios.css" rel="stylesheet" type="text/css" />
+	<link href="style2.css" rel="stylesheet" type="text/css" />
+	<link href="img/progress.png" rel="icon" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+	<style type="text/css">/* Agrega esta regla CSS para ocultar la imagen en las secciones posteriores */
+      .hide-image {
+        display: none;
+      }
+      .freebirdFormviewerViewHeaderTitleRow {
+        display: none;
+      }
+	</style>
+	<script>
+      window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('barra-navegacion');
+        if (window.scrollY > 0) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+      window.addEventListener('load',function() {
+        const galeria = document.getElementById('galeria');
+        const imagenes = galeria.getElementsByTagName('img');
+        let index = 0;
+        const intervalo = 3000;
+        
+        function cambiarImagen() {
+          imagenes[index].style.opacity = 0;
+          index = (index + 1) % imagenes.length;
+          imagenes[index].style.opacity = 1;
+        }
+        function iniciarGaleria(){
+          imagenes[index].style.opacity = 1;
+          setInterval(cambiarImagen, intervalo);
+        }
+        if (imagenes.length > 0){
+          for (let i = 0; i < imagenes.length; i++){
+            imagenes[i].style.opacity = 0;
+          }
+          iniciarGaleria();
+        }
+    });
+    </script>
+</head>
+<body><script>
+      const footer = document.querySelector('footer');
+      const iconos = footer.querySelectorAll('.redes-container a');
+
+      iconos.forEach((icono) => {
+        icono.addEventListener('mouseover', () => {
+          iconos.forEach((otherIcono) => {
+            if (otherIcono !== icono) {
+              otherIcono.classList.toggle('desenfocado', true);
+            }
+          });
+          icono.classList.toggle('no-escala', true);
+        });
+
+        icono.addEventListener('mouseout', () => {
+          iconos.forEach((otherIcono) => {
+            otherIcono.classList.toggle('desenfocado', false);
+          });
+          icono.classList.toggle('no-escala', false);
+        });
+      });
+      function mostrarSeccion(seccion) {
+        const afterschoolSection = document.getElementById('tercera-seccion-izquierda');
+        const escuelaParaPadresSection = document.getElementById('tercera-seccion-derecha');
+
+        if (seccion === 'afterschool') {
+          afterschoolSection.style.display = 'block';
+          escuelaParaPadresSection.style.display = 'none';
+        } else if (seccion === 'escuela-para-padres') {
+          afterschoolSection.style.display = 'none';
+          escuelaParaPadresSection.style.display = 'block';
+        }
+      }
+window.onload = function() {
+  var logo = document.getElementById("logo");
+  logo.onclick = function() {
+    window.location.href = "tu_link_aqui";
+  };
+};
+    </script></body>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+<div id="loader">
+<div class="block red"></div>
+
+<div class="block green"></div>
+
+<div class="block blue"></div>
+<!-- Agrega más bloques según sea necesario --></div>
+<!--Primera sección-->
+
+<div id="primera-seccion">
+<div id="barra-navegacion"><a href="https://progresseducational.com.mx/"><img alt="Logo del preescolar" id="logo" src="img/progress.png" /> </a>
+
+<div id="opciones-navegacion"><a href="index.html">Inicio</a> <a href="acerca-de.html">Acerca de nosotros</a> <a href="maternal.html">Maternal</a> <a href="kinder.html">Kinder</a> <a href="servicios.html">Servicios</a></div>
+</div>
+
+<div id="primera-seccion-contenido">
+<h1>Servicios</h1>
+</div>
+</div>
+<!-- Segunda sección -->
+
+<div class="dos-columnas seccion-animada" id="segunda-seccion" onclick="mostrarSeccion('afterschool')">
+<div class="columna-izq-2 afterschool">
+<h2>Afterschool</h2>
+</div>
+
+<div class="columna-der-2 escuela-para-padres" onclick="mostrarSeccion('escuela-para-padres')">
+<h2>Escuela para padres</h2>
+</div>
+</div>
+<!-- Tercera sección -->
+
+<div class="dos-columnas seccion-animada" id="tercera-seccion">
+<div class="columna-izq-2">
+<p class="frase">Ofrecemos un servicio que puede ser personalizado en base a sus necesidades mediante el cuidado de su hij@ al salir de la escuela poniendo a su alcance opciones como:</p>
+
+<p class="frase">- Tareas dirigidas: Los ni&ntilde;os realizan su tarea bajo la supervisi&oacute;n de una maestra, asegurando que todas sus tareas sean terminadas con &eacute;xito.</p>
+
+<p class="frase">- Actividades recreativas: Los ni&ntilde;os pueden disfrutar de nuestros espacios recreativos y complementarlos con actividades extracurriculares.</p>
+</div>
+
+<div class="columna-der-2">
+<p class="frase">El programa de escuela para padres es un espacio de formaci&oacute;n y reflexi&oacute;n donde se orienta a los padres en la toma de decisiones y estimulan la construcci&oacute;n positiva de las relaciones familiares; consta de conferencias y talleres impartidos por especialistas nacionales y regionales que orientan a los padres de familia en c&oacute;mo abordar temas dif&iacute;ciles con sus hijos es por ello, que los invitamos cordialmente a formar parte de nuestro programa, de tal manera que podamos caminar juntos hacia el objetivo primordial que es el de formar ni&ntilde;os felices y con un alto grado de compromiso con su bienestar social y emocional.</p>
+</div>
+</div>
+<!--pie de página-->
+
+<footer>
+  <div class="redes-container">
+    <a href="https://www.facebook.com/progresseducationalinst" class="facebook"><i class="fa fa-facebook-f"></i></a></li>
+    <a href="https://www.instagram.com/progresseducational/" class="instagram"><i class="fa fa-instagram"></i></a></li>
+  </div>
+  <p><i class="fa fa-phone"></i> Teléfono: <a href="tel:3331763652" class="footer-link">3331763652</a></p>
+  <p>Dirección: <a href="https://goo.gl/maps/gaVsMvKyPPDgcJwNA" class="footer-link">C. Mallorca 1410, Lomas del Country</a></p>
+  <p>Guadalajara, Jalisco</p>
+  <p>&copy; Copyright 2023 <span Style="Color: #0984e3;">Progress Educational Institute</span></p>
+</footer>
+<script>
+    window.addEventListener('load', function() {
+      const loader = document.getElementById('loader');      
+      setTimeout(function() {
+        loader.style.display = 'none';
+        document.body.style.display = 'block';
+    }, 1000);   
+});
+
+function applyHoverAnimation(selector) {
+  const elementList = document.querySelectorAll(selector);
+
+  elementList.forEach(element => {
+    const paragraphList = element.querySelectorAll('p');
+
+    paragraphList.forEach(paragraph => {
+      const originalText = paragraph.textContent;
+      const words = originalText.split(' ');
+      paragraph.innerHTML = '';
+
+      words.forEach((word, index) => {
+        const span = document.createElement('span');
+        span.classList.add('word');
+        span.textContent = word;
+        paragraph.appendChild(span);
+
+        if (index < words.length - 1) {
+          const space = document.createTextNode(' ');
+          paragraph.appendChild(space);
+        }
+      });
+
+      let isAnimating = false;
+
+      paragraph.addEventListener('mouseover', () => {
+        if (!isAnimating) {
+          isAnimating = true;
+
+          const spans = paragraph.querySelectorAll('.word');
+          let counter = 0;
+
+          const intervalId = setInterval(() => {
+            spans[counter].style.color = 'white';
+            counter++;
+
+            if (counter === spans.length) {
+              clearInterval(intervalId);
+              isAnimating = false;
+            }
+          }, 200);
+        }
+      });
+
+      paragraph.addEventListener('mouseleave', () => {
+        const spans = paragraph.querySelectorAll('.word');
+
+        spans.forEach(span => {
+          span.style.color = 'white';
+        });
+      });
+    });
+  });
+}
+
+applyHoverAnimation('.columna-der-2');
+applyHoverAnimation('.columna-izq-2');
+
+
+
+
+
+    function mostrarImagen(index) {
+      const galeria = document.getElementById('galeria');
+      const imagenes = galeria.getElementsByTagName('img');
+
+      for (let i = 0; i < imagenes.length; i++) {
+        imagenes[i].style.opacity = 0;
+      }
+
+      imagenes[index].style.opacity = 1;
+    }
+
+  window.addEventListener('DOMContentLoaded', function() {
+    const segundaSeccion = document.getElementById('segunda-seccion');
+    const terceraSeccion = document.getElementById('tercera-seccion');
+
+    // Función para agregar la clase 'aparecer' a una sección
+    function mostrarSeccionAnimada(seccion) {
+      seccion.classList.add('aparecer');
+    }
+
+    // Verificar si la sección está visible en el viewport
+    function esVisible(elemento) {
+      const rect = elemento.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    // Detectar cuando se muestra la segunda sección y activar el efecto de "block revealing"
+    window.addEventListener('scroll', function() {
+  const navbar = document.getElementById('barra-navegacion');
+  const segundaSeccion = document.getElementById('segunda-seccion');
+  const terceraSeccion = document.getElementById('tercera-seccion');
+
+  if (window.scrollY > 0) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+
+  if (esVisible(segundaSeccion)) {
+    mostrarSeccionAnimada(segundaSeccion);
+    // Desactivar el listener para no repetir el efecto
+    window.removeEventListener('scroll', arguments.callee);
+  }
+
+  if (esVisible(terceraSeccion)) {
+    mostrarSeccionAnimada(terceraSeccion);
+    // Desactivar el listener para no repetir el efecto
+    window.removeEventListener('scroll', arguments.callee);
+  }
+});
+
+function esVisible(elemento) {
+  const rect = elemento.getBoundingClientRect();
+  const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+  return rect.top <= windowHeight;
+}
+
+function mostrarSeccionAnimada(elemento) {
+  elemento.style.opacity = 1;
+  elemento.style.transform = 'translateY(0)';
+}
+
+  });
+
+  </script></html>

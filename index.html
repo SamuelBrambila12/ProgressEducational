@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=devide-width">
+	<title>Progress Educational Institute</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link href="style2.css" rel="stylesheet" type="text/css" />
+	<link href="img/progress.png" rel="icon" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+	<style type="text/css">/* Agrega esta regla CSS para ocultar la imagen en las secciones posteriores */
+      .hide-image {
+        display: none;
+      }
+      .freebirdFormviewerViewHeaderTitleRow {
+        display: none;
+      }
+	</style>
+	<script>
+      window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('barra-navegacion');
+        if (window.scrollY > 0) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+      window.addEventListener('load',function() {
+        const galeria = document.getElementById('galeria');
+        const imagenes = galeria.getElementsByTagName('img');
+        let index = 0;
+        const intervalo = 3000;
+        
+        function cambiarImagen() {
+          imagenes[index].style.opacity = 0;
+          index = (index + 1) % imagenes.length;
+          imagenes[index].style.opacity = 1;
+        }
+        function iniciarGaleria(){
+          imagenes[index].style.opacity = 1;
+          setInterval(cambiarImagen, intervalo);
+        }
+        if (imagenes.length > 0){
+          for (let i = 0; i < imagenes.length; i++){
+            imagenes[i].style.opacity = 0;
+          }
+          iniciarGaleria();
+        }
+      window.addEventListener('load', function() {
+        const aviso = document.getElementById('aviso');
+        const botonCerrar = document.querySelector('#aviso .cerrar');
+
+        botonCerrar.addEventListener('click', function() {
+          aviso.style.display = 'none';
+        });
+      });
+    });
+
+    </script>
+</head>
+<body><script>
+      const footer = document.querySelector('footer');
+      const iconos = footer.querySelectorAll('.redes-container a');
+
+      iconos.forEach((icono) => {
+        icono.addEventListener('mouseover', () => {
+          iconos.forEach((otherIcono) => {
+            if (otherIcono !== icono) {
+              otherIcono.classList.toggle('desenfocado', true);
+            }
+          });
+          icono.classList.toggle('no-escala', true);
+        });
+
+        icono.addEventListener('mouseout', () => {
+          iconos.forEach((otherIcono) => {
+            otherIcono.classList.toggle('desenfocado', false);
+          });
+          icono.classList.toggle('no-escala', false);
+        });
+      });
+window.onload = function() {
+  var logo = document.getElementById("logo");
+  logo.onclick = function() {
+    window.location.href = "tu_link_aqui";
+  };
+};
+
+    </script></body>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+<div id="loader">
+<div class="block red"></div>
+
+<div class="block green"></div>
+
+<div class="block blue"></div>
+<!-- Agrega más bloques según sea necesario --></div>
+
+<div id="aviso">
+<div class="contenido"><img alt="Aviso importante" src="img/aviso.png" style="width: 600px; height: auto;" /> <span class="cerrar">&times;</span></div>
+</div>
+<!--Primera sección-->
+
+<div id="primera-seccion">
+<div id="barra-navegacion"><a href="https://progresseducational.com.mx/"><img alt="Logo del preescolar" id="logo" src="img/progress.png" /> </a>
+
+<div id="opciones-navegacion"><a href="index.html">Inicio</a> <a href="acerca-de.html">Acerca de nosotros</a> <a href="maternal.html">Maternal</a> <a href="kinder.html">Kinder</a> <a href="servicios.html">Servicios</a></div>
+</div>
+
+<div id="primera-seccion-contenido">
+<p>Educaci&oacute;n biling&uuml;e de calidad</p>
+
+<hr />
+<h1>Progress Educational Institute</h1>
+</div>
+<!--Segunda sección-->
+
+<div id="segunda-seccion">
+<p class="frase">Un lugar para aprender, crecer y prosperar</p>
+</div>
+<!--Tercera sección-->
+
+<div class="appear-animation" id="tercera-seccion">
+<div id="titulo">
+<p></p>
+
+<h2>Nuestras instalaciones</h2>
+
+<hr /></div>
+
+<div class="galeria-container" id="galeria"><img alt="" src="img/contru.png" /> <img alt="" src="img/contru.png" /> <img alt="" src="img/contru.png" /></div>
+
+<div id="cuadros-galeria">
+<div class="cuadro-galeria" onclick="mostrarImagen(0)"><img alt="Cuadro 1" src="img/contru.png" /></div>
+
+<div class="cuadro-galeria" onclick="mostrarImagen(1)"><img alt="Cuadro 2" src="img/contru.png" /></div>
+
+<div class="cuadro-galeria" onclick="mostrarImagen(2)"><img alt="Cuadro 3" src="img/contru.png" /></div>
+</div>
+</div>
+<!--cuarta sección-->
+
+<div id="cuarta-seccion">
+<div class="clouds cloud1"></div>
+
+<div class="clouds cloud2"></div>
+
+<div class="clouds cloud3"></div>
+
+<div class="sun"></div>
+
+<div class="full-width" id="contenedor">
+<div class="animated-background" id="cuarta-seccion-izq"><a href="maternal.html"><img alt="Maternal" class="rounded-image same-size-images floating-image" src="img/maternal2.jpg" /> </a>
+
+<h3><a href="maternal.html">Maternal</a></h3>
+<a href="maternal.html"> </a></div>
+
+<div id="cuarta-seccion-medio"><a href="kinder.html"><img alt="Kinder" class="rounded-image same-size-images floating-image" src="img/kinder.jpg" /> </a>
+
+<h3><a href="kinder.html">Kinder</a></h3>
+<a href="kinder.html"> </a></div>
+
+<div id="cuarta-seccion-izq"><a href="servicios.html"><img alt="Afterschool" class="rounded-image same-size-images floating-image" src="img/afterschool.jpg" /> </a>
+
+<h3><a href="servicios.html">Afterschool</a></h3>
+<a href="servicios.html"> </a></div>
+</div>
+</div>
+<!--quinta sección-->
+
+<div class="appear-animation" id="quinta-seccion">
+<div id="contenedor">
+<div class="mitad" id="quinta-seccion-izq"></div>
+
+<div class="mitad" id="quinta-seccion-der">
+<h3>Plataforma escolar</h3>
+
+<hr />
+<p>Ingreso a la plataforma escolar</p>
+<a class="btn-azul" href="https://progress.schoolibox.com/">Ir</a></div>
+</div>
+</div>
+
+<div class="appear-animation" id="formulario-titulo">
+<h2></h2>
+
+<h2>Cont&aacute;ctanos</h2>
+
+<hr />
+<div data-tf-iframe-props="title=Formulario para contactar a mi empresa" data-tf-medium="snippet" data-tf-opacity="100" data-tf-transitive-search-params="" data-tf-widget="LKLizog0" style="width:100%;height:500px;"></div>
+<script src="https://embed.typeform.com/next/embed.js"></script></div>
+<!--pie de página-->
+
+<footer>
+<div class="redes-container"></div>
+
+<p>Tel&eacute;fono: <a class="footer-link" href="tel:3331763652">3331763652</a></p>
+
+<p>Direcci&oacute;n: <a class="footer-link" href="https://goo.gl/maps/gaVsMvKyPPDgcJwNA">C. Mallorca 1410, Lomas del Country</a></p>
+
+<p>Guadalajara, Jalisco</p>
+
+<p>&copy; Copyright 2023 <span style="Color: #0984e3;">Progress Educational Institute</span></p>
+</footer>
+<script>
+    window.addEventListener('load', function() {
+      const loader = document.getElementById('loader');
+      loader.style.display = 'none';
+    });
+    window.addEventListener('load', function() {
+      const aviso = document.getElementById('aviso');
+      const cerrarAviso = aviso.querySelector('.cerrar');
+
+      cerrarAviso.addEventListener('click', function() {
+        aviso.style.display = 'none';
+      });
+    });
+    // Agregamos un evento para ocultar el cuadro de carga cuando la página se carga completamente
+    window.addEventListener("load", function () {
+      var loader = document.getElementById("loader");
+      loader.style.display = "none";
+    });
+
+    function mostrarImagen(index) {
+      const galeria = document.getElementById('galeria');
+      const imagenes = galeria.getElementsByTagName('img');
+
+      for (let i = 0; i < imagenes.length; i++) {
+        imagenes[i].style.opacity = 0;
+      }
+
+      imagenes[index].style.opacity = 1;
+    }
+
+    window.addEventListener('scroll', function() {
+      const terceraSeccion = document.getElementById('tercera-seccion');
+      const quintaSeccion = document.getElementById('quinta-seccion');
+      const terceraSeccionOffsetTop = terceraSeccion.offsetTop;
+      const quintaSeccionOffsetTop = quintaSeccion.offsetTop;
+      const formularioTitulo = document.getElementById('formulario-titulo');
+      const formularioOffsetTop = formularioTitulo.offsetTop;
+      const windowScrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      if (windowScrollY > terceraSeccionOffsetTop - windowHeight) {
+        terceraSeccion.classList.add('appear-animation');
+      } else {
+        terceraSeccion.classList.remove('appear-animation');
+      }
+      if (windowScrollY > quintaSeccionOffsetTop - windowHeight) {
+        quintaSeccion.classList.add('appear-animation');
+      } else {
+        quintaSeccion.classList.remove('appear-animation');
+      }
+      if (windowScrollY > formularioOffsetTop - windowHeight) {
+        formularioTitulo.classList.add('appear-animation');
+      } else {
+        formularioTitulo.classList.remove('appear-animation');
+      }
+    });
+
+  </script></div>
+</html>

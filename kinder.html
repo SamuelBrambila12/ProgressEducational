@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=devide-width">
+	<title>Progress Educational Institute</title>
+	<link href="kinder1.css" rel="stylesheet" type="text/css" />
+	<link href="style2.css" rel="stylesheet" type="text/css" />
+	<link href="img/progress.png" rel="icon" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+	<style type="text/css">/* Agrega esta regla CSS para ocultar la imagen en las secciones posteriores */
+      .hide-image {
+        display: none;
+      }
+      .freebirdFormviewerViewHeaderTitleRow {
+        display: none;
+      }
+	</style>
+	<script>
+      window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('barra-navegacion');
+        if (window.scrollY > 0) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+      window.addEventListener('load',function() {
+        const galeria = document.getElementById('galeria');
+        const imagenes = galeria.getElementsByTagName('img');
+        let index = 0;
+        const intervalo = 3000;
+        
+        function cambiarImagen() {
+          imagenes[index].style.opacity = 0;
+          index = (index + 1) % imagenes.length;
+          imagenes[index].style.opacity = 1;
+        }
+        function iniciarGaleria(){
+          imagenes[index].style.opacity = 1;
+          setInterval(cambiarImagen, intervalo);
+        }
+        if (imagenes.length > 0){
+          for (let i = 0; i < imagenes.length; i++){
+            imagenes[i].style.opacity = 0;
+          }
+          iniciarGaleria();
+        }
+    });
+    </script>
+</head>
+<body><script>
+      const footer = document.querySelector('footer');
+      const iconos = footer.querySelectorAll('.redes-container a');
+
+      iconos.forEach((icono) => {
+        icono.addEventListener('mouseover', () => {
+          iconos.forEach((otherIcono) => {
+            if (otherIcono !== icono) {
+              otherIcono.classList.toggle('desenfocado', true);
+            }
+          });
+          icono.classList.toggle('no-escala', true);
+        });
+
+        icono.addEventListener('mouseout', () => {
+          iconos.forEach((otherIcono) => {
+            otherIcono.classList.toggle('desenfocado', false);
+          });
+          icono.classList.toggle('no-escala', false);
+        });
+      });
+window.onload = function() {
+  var logo = document.getElementById("logo");
+  logo.onclick = function() {
+    window.location.href = "tu_link_aqui";
+  };
+};
+    </script></body>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+<div id="loader">
+<div class="block red"></div>
+
+<div class="block green"></div>
+
+<div class="block blue"></div>
+<!-- Agrega más bloques según sea necesario --></div>
+<!--Primera sección-->
+
+<div id="primera-seccion">
+<div id="barra-navegacion"><a href="https://progresseducational.com.mx/"><img alt="Logo del preescolar" id="logo" src="img/progress.png" /> </a>
+
+<div id="opciones-navegacion"><a href="index.html">Inicio</a> <a href="acerca-de.html">Acerca de nosotros</a> <a href="maternal.html">Maternal</a> <a href="kinder.html">Kinder</a> <a href="servicios.html">Servicios</a></div>
+</div>
+
+<div id="primera-seccion-contenido">
+<h1>Kinder</h1>
+
+<h2>Para peque&ntilde;os de 3 a 6 a&ntilde;os</h2>
+</div>
+</div>
+<!--Segunda sección-->
+
+<div id="segunda-seccion">
+<p class="frase">La etapa del desarrollo del ni&ntilde;o dentro del preescolar es donde se absorben las caracter&iacute;sticas de los ambientes y el conocimiento de las cualidades de los objetos, donde se desarrollan las estructuras neurol&oacute;gicas que facilitan el incremento del lenguaje y el razonamiento, donde la lengua y las manos son instrumentos de la inteligencia, permiti&eacute;ndoles la b&uacute;squeda del conocimiento mediante la relaci&oacute;n integral con el medio y la libertad de actuar dando una intensa motivaci&oacute;n para su autoconstrucci&oacute;n y la pr&aacute;ctica de las relaciones interpersonales.</p>
+
+<p class="frase">Aqu&iacute; los peque&ntilde;os, aprender&aacute;n jugando habilidades b&aacute;sicas para que ingresen a la siguiente etapa escolar con los recursos y herramientas necesarias que faciliten su futuro escolar egresando as&iacute; con manejo de la lectoescritura y los conceptos necesarios en el &aacute;rea de matem&aacute;ticas, as&iacute; como tambi&eacute;n el manejo del idioma ingl&eacute;s para poder continuar en un sistema biling&uuml;e durante la primaria. En esta etapa iniciamos la ense&ntilde;anza y el reconocimiento de los l&iacute;mites con amor.</p>
+<img alt="Calcomanía" id="imagen-calcomania" src="img/sun.png" /> <img alt="Calcomanía2" id="imagen-calcomania2" src="img/blogobject1.png" /></div>
+<!--Tercera sección-->
+
+<div id="tercera-seccion">
+<div class="galeria-container" id="galeria"><img alt="" src="img/1.png" /> <img alt="" src="img/1.png" /> <img alt="" src="img/1.png" /></div>
+
+<div id="cuadros-galeria">
+<div class="cuadro-galeria" onclick="mostrarImagen(0)"><img alt="Cuadro 1" src="img/1.png" /></div>
+
+<div class="cuadro-galeria" onclick="mostrarImagen(1)"><img alt="Cuadro 2" src="img/1.png" /></div>
+
+<div class="cuadro-galeria" onclick="mostrarImagen(2)"><img alt="Cuadro 3" src="img/1.png" /></div>
+</div>
+</div>
+<!--Cuarta seccion-->
+
+<div id="cuarta-seccion">
+<div id="contenedor">
+<div class="mitad" id="cuarta-seccion-izq">
+<div class="fila fila-1">
+<div class="bloque bloque-1">
+<div class="parte-frontal"><img alt="Deporte 1" src="img/fut.png" />
+<h3>Sports</h3>
+</div>
+
+<div class="parte-trasera">
+<p>Fomenta y fortalece las cualidades motoras b&aacute;sicas que conforman la aptitud f&iacute;sica y orienta su amplia necesidad de expresi&oacute;n cin&eacute;tica para su desarrollo f&iacute;sico y motriz, en forma armoniosa e integral.</p>
+</div>
+</div>
+
+<div class="bloque bloque-2">
+<div class="parte-frontal"><img alt="Deporte 2" src="img/yoga.png" />
+<h3>Yoga</h3>
+</div>
+
+<div class="parte-trasera">
+<p>Taller que ayuda a conocer el cuerpo, consolidar el esquema corporal, desarrollar la lateralidad y perfeccionar psicomotricidad fina y gruesa.</p>
+</div>
+</div>
+</div>
+
+<div class="fila fila-2">
+<div class="bloque bloque-3">
+<div class="parte-frontal"><img alt="Deporte 3" src="img/ballet.png" />
+<h3>Ballet</h3>
+</div>
+
+<div class="parte-trasera">
+<p>Este taller otorga muchos beneficios a nuestras alumnas, ya que este tipo de danza requiere de gran concentraci&oacute;n para el dominio de todo el cuerpo, adem&aacute;s de desarrollar flexibilidad, coordinaci&oacute;n y ritmo.</p>
+</div>
+</div>
+
+<div class="bloque bloque-4">
+<div class="parte-frontal"><img alt="Deporte 4" src="img/robot.png" />
+<h3>Rob&oacute;tica</h3>
+</div>
+
+<div class="parte-trasera">
+<p>Con el objetivo de incidir en el desarrollo del pensamiento creativo, nuestra escuela cuenta con el taller de rob&oacute;tica, donde los peque&ntilde;os de preescolar aprenden a ensamblar las piezas de LEGO y a interpretar mapas sencillos.</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="mitad" id="cuarta-seccion-der"><img alt="" src="img/horariokin.png" /></div>
+</div>
+</div>
+<!--pie de página-->
+
+<footer>
+  <div class="redes-container">
+    <a href="https://www.facebook.com/progresseducationalinst" class="facebook"><i class="fa fa-facebook-f"></i></a></li>
+    <a href="https://www.instagram.com/progresseducational/" class="instagram"><i class="fa fa-instagram"></i></a></li>
+  </div>
+  <p><i class="fa fa-phone"></i> Teléfono: <a href="tel:3331763652" class="footer-link">3331763652</a></p>
+  <p>Dirección: <a href="https://goo.gl/maps/gaVsMvKyPPDgcJwNA" class="footer-link">C. Mallorca 1410, Lomas del Country</a></p>
+  <p>Guadalajara, Jalisco</p>
+  <p>&copy; Copyright 2023 <span Style="Color: #0984e3;">Progress Educational Institute</span></p>
+</footer>
+<script>
+    window.addEventListener('load', function() {
+      const loader = document.getElementById('loader');      
+      setTimeout(function() {
+        loader.style.display = 'none';
+        document.body.style.display = 'block';
+    }, 1000);   
+});
+
+    function mostrarImagen(index) {
+      const galeria = document.getElementById('galeria');
+      const imagenes = galeria.getElementsByTagName('img');
+
+      for (let i = 0; i < imagenes.length; i++) {
+        imagenes[i].style.opacity = 0;
+      }
+
+      imagenes[index].style.opacity = 1;
+    }
+  </script></html>

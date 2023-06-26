@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=devide-width">
+	<title>Progress Educational Institute</title>
+	<link href="acerca.css" rel="stylesheet" type="text/css" />
+	<link href="style2.css" rel="stylesheet" type="text/css" />
+	<link href="img/progress.png" rel="icon" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+	<style type="text/css">/* Agrega esta regla CSS para ocultar la imagen en las secciones posteriores */
+      .hide-image {
+        display: none;
+      }
+      .freebirdFormviewerViewHeaderTitleRow {
+        display: none;
+      }
+	</style>
+	<script>
+      window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('barra-navegacion');
+        if (window.scrollY > 0) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+      window.addEventListener('load',function() {
+        const galeria = document.getElementById('galeria');
+        const imagenes = galeria.getElementsByTagName('img');
+        let index = 0;
+        const intervalo = 3000;
+        
+        function cambiarImagen() {
+          imagenes[index].style.opacity = 0;
+          index = (index + 1) % imagenes.length;
+          imagenes[index].style.opacity = 1;
+        }
+        function iniciarGaleria(){
+          imagenes[index].style.opacity = 1;
+          setInterval(cambiarImagen, intervalo);
+        }
+        if (imagenes.length > 0){
+          for (let i = 0; i < imagenes.length; i++){
+            imagenes[i].style.opacity = 0;
+          }
+          iniciarGaleria();
+        }
+    });
+    </script>
+</head>
+<body><script>
+      const footer = document.querySelector('footer');
+      const iconos = footer.querySelectorAll('.redes-container a');
+
+      iconos.forEach((icono) => {
+        icono.addEventListener('mouseover', () => {
+          iconos.forEach((otherIcono) => {
+            if (otherIcono !== icono) {
+              otherIcono.classList.toggle('desenfocado', true);
+            }
+          });
+          icono.classList.toggle('no-escala', true);
+        });
+
+        icono.addEventListener('mouseout', () => {
+          iconos.forEach((otherIcono) => {
+            otherIcono.classList.toggle('desenfocado', false);
+          });
+          icono.classList.toggle('no-escala', false);
+        });
+      });
+window.onload = function() {
+  var logo = document.getElementById("logo");
+  logo.onclick = function() {
+    window.location.href = "tu_link_aqui";
+  };
+};
+    </script></body>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+<div id="loader">
+<div class="block red"></div>
+
+<div class="block green"></div>
+
+<div class="block blue"></div>
+<!-- Agrega más bloques según sea necesario --></div>
+<!--Primera sección-->
+
+<div id="primera-seccion">
+<div id="barra-navegacion">
+<a href="https://progresseducational.com.mx/">
+<img alt="Logo del preescolar" id="logo" src="img/progress.png" />
+</a>
+<div id="opciones-navegacion"><a href="index.html">Inicio</a> <a href="acerca-de.html">Acerca de nosotros</a> <a href="maternal.html">Maternal</a> <a href="kinder.html">Kinder</a> <a href="servicios.html">Servicios</a></div>
+</div>
+
+<div id="primera-seccion-contenido">
+<h1>Acerca de nosotros</h1>
+</div>
+</div>
+<!--Segunda sección-->
+
+<div id="segunda-seccion">
+<p class="frase">Somos un colegio biling&uuml;e que busca ofrecer educaci&oacute;n de calidad y excelencia mediante un modelo que ha sido dise&ntilde;ado para potencializar el desarrollo f&iacute;sico, emocional y mental, formando a trav&eacute;s de valores, l&iacute;deres con las herramientas para detonar todo su potencial, capaces de enfrentar los retos que tendr&aacute;n en la vida y aportar al bien de su familia y de la sociedad.</p>
+
+<p class="frase">Celebramos los talentos de cada alumno, los cuales lo hacen ser quien es, as&iacute; como los ritmos en los que aprende, se desarrolla y se supera.</p>
+
+<p class="frase">El alumno es el protagonista de su aprendizaje y toda la comunidad educativa, junto con su familia, le acompa&ntilde;a y gu&iacute;a para alcanzar su mejor versi&oacute;n.</p>
+</div>
+<!--Tercera sección-->
+
+<div id="tercera-seccion">
+<div class="imagen-centrada"><img alt="" src="img/logo-animado.gif" /></div>
+</div>
+<!--pie de página-->
+
+<footer>
+  <div class="redes-container">
+    <a href="https://www.facebook.com/progresseducationalinst" class="facebook"><i class="fa fa-facebook-f"></i></a></li>
+    <a href="https://www.instagram.com/progresseducational/" class="instagram"><i class="fa fa-instagram"></i></a></li>
+  </div>
+  <p><i class="fa fa-phone"></i> Teléfono: <a href="tel:3331763652" class="footer-link">3331763652</a></p>
+  <p>Dirección: <a href="https://goo.gl/maps/gaVsMvKyPPDgcJwNA" class="footer-link">C. Mallorca 1410, Lomas del Country</a></p>
+  <p>Guadalajara, Jalisco</p>
+  <p>&copy; Copyright 2023 <span Style="Color: #0984e3;">Progress Educational Institute</span></p>
+</footer>
+<script>
+    window.addEventListener('load', function() {
+      const loader = document.getElementById('loader');      
+      setTimeout(function() {
+        loader.style.display = 'none';
+        document.body.style.display = 'block';
+    }, 1000);   
+});
+
+    function mostrarImagen(index) {
+      const galeria = document.getElementById('galeria');
+      const imagenes = galeria.getElementsByTagName('img');
+
+      for (let i = 0; i < imagenes.length; i++) {
+        imagenes[i].style.opacity = 0;
+      }
+
+      imagenes[index].style.opacity = 1;
+    }
+  </script></html>
